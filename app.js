@@ -15,7 +15,7 @@
       var count = countLunches($scope.lunches);
       if (!count) {
         $scope.message = "Please enter data first";
-        $scope.customStyle = {'color': 'red'};
+        $scope.customStyle = {'color': 'red', 'border':'1px solid red'};
       } else {
         if (count && count <= 3) {
           $scope.message = "Enjoy!";
@@ -25,7 +25,7 @@
           $scope.message = "Too much!";
         }
         
-        $scope.customStyle = {'color': 'green'};
+        $scope.customStyle = {'color': 'green', 'border':'1px solid green'};
       }
     };
 
