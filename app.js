@@ -2,19 +2,31 @@
   'use strict'; 
 
   angular.module("LunchCheck", [])
-  
+
   .controller('LunchFormController', LunchFormController);
 
   LunchFormController.$inject = ['$scope'];
   function LunchFormController($scope) {
     $scope.lunches = "";
     $scope.message = "";
+    $scope.customStyle = "";
 
     $scope.displayMessage = function () {
       var count = countLunches($scope.lunches);
-      if(!count) $scope.message = "Please enter data first";
-      if(count && count <= 3) $scope.message = "Enjoy!";
-      else if(count > 3)  $scope.message = "Too much!";
+      if (!count) {
+        $scope.message = "Please enter data first";
+        $scope.customStyle = {'color': 'red'};
+      } else {
+        if (count && count <= 3) {
+          $scope.message = "Enjoy!";
+        }
+
+        else if (count > 3) {
+          $scope.message = "Too much!";
+        }
+        
+        $scope.customStyle = {'color': 'green'};
+      }
     };
 
     var countLunches = function (str) {
