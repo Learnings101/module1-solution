@@ -2,8 +2,11 @@
   'use strict'; 
 
   angular.module("LunchCheck", [])
+  
+  .controller('LunchFormController', LunchFormController);
 
-  .controller('LunchFormController', function($scope) {
+  LunchFormController.$inject = ['$scope'];
+  function LunchFormController($scope) {
     $scope.lunches = "";
     $scope.message = "";
 
@@ -19,7 +22,6 @@
       var lunchArray = str.split(',');
       return lunchArray.length;
     };
-
-  });
+  }
 
 })(); 
