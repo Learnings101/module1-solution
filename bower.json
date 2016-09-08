@@ -1,0 +1,25 @@
+{
+  "name": "module1-solution",
+  "homepage": "https://github.com/Learnings101/module1-solution",
+  "authors": [
+    "Dan Sajjad <dan.sajjad@gmail.com>"
+  ],
+  "description": "Hopkins Angular assignment 1",
+  "main": "app.js",
+  "keywords": [
+    "angular",
+    "1.5"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
